@@ -1,0 +1,16 @@
+<!ENTITY melampus.prefs.preferences "Melampus Preferences">
+<!ENTITY melampus.prefs.mouse "Mouse Settings">
+<!ENTITY melampus.prefs.system "System Settings">
+<!ENTITY melampus.prefs.general "General">
+<!ENTITY melampus.prefs.debug "Enable Console Debugging">
+<!ENTITY melampus.prefs.includecontext "Extract Surrounding Context From Word">
+<!ENTITY melampus.prefs.popuptrigger "Event trigger for popup:">
+<!ENTITY melampus.prefs.popuptrigger.mousemove "mousemove">
+<!ENTITY melampus.prefs.popuptrigger.dblclick "dblclick">
+<!ENTITY melampus.prefs.url "Service URLS">
+<!ENTITY melampus.prefs.url.lexicon "Lexicon URL">
+<!ENTITY melampus.prefs.url.lexicon.id "Lexicon User ID">
+<!ENTITY melampus.prefs.url.lexicon.pass "Lexicon Password">
+<!ENTITY melampus.prefs.url.grammar "Grammar URL">
+<!ENTITY melampus.prefs.language "Language">
+

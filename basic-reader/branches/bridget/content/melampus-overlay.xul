@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+
+<?xml-stylesheet href="chrome://global/skin/global.css" type="text/css"?>
+<?xml-stylesheet href="chrome://melampus/skin/melampus.css" type="text/css"?>
+
+<!DOCTYPE window SYSTEM "chrome://melampus/locale/melampus.dtd">
+
+<overlay id="melampus" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+    <stringbundleset id="stringbundleset">
+        <stringbundle id="melampus-strings" 
+                      src="chrome://melampus/locale/melampus.properties"/>
+    </stringbundleset>
+
+    <script type="application/x-javascript" src="chrome://melampus/content/melampus-utils.js" />
+	<script type="application/x-javascript" src="chrome://melampus/content/melampus-main.js" />
+    <script type="application/x-javascript" src="chrome://melampus/content/melampus-popup.js" />
+    <script type="application/x-javascript" src="chrome://melampus/content/jquery-1.2.1.min.js" />
+    <script type="application/x-javascript" src="chrome://melampus/content/webtoolkit.base64.js" />
+    <script type="application/x-javascript" src="chrome://melampus/content/langtools/melampus-lang-tool.js" />
+    <script type="application/x-javascript" src="chrome://melampus/content/langtools/melampus-latin.js" />
+
+
+        
+	<commandset id="mainCommandSet">
+		<command id="melampus-toggle-cmd" oncommand="MP.main.mp_inlineToggle();" />
+	</commandset>
+
+	<popup id="contentAreaContextMenu">
+		<menuseparator id="melampus-separator-cm" hidden="true" />
+		<menuitem id="melampus-toggle-cm" label="&melampus.inline.cm;" accesskey="&melampus.inline.cm.key;"  key="melampus-toggle-key" command="melampus-toggle-cmd" hidden="false" />
+	</popup>
+	
+	<menupopup id="menu_ToolsPopup">
+        <menuseparator id="melampus-separator-tm" hidden="false" insertbefore="devToolsSeparator" />
+        <menuitem id="melampus-toggle-tm" label="&melampus.inline.tm;" accesskey="&melampus.inline.tm.key;" key="melampus-toggle-key" command="melampus-toggle-cmd"  hidden="false" insertbefore="devToolsSeparator" />
+    </menupopup>
+</overlay>

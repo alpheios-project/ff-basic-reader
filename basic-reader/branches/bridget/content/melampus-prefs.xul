@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<?xml-stylesheet href="chrome://melampus/skin/prefs/melampus-prefs.css/" type="text/css"?>
+<!DOCTYPE overlay SYSTEM "chrome://melampus/locale/melampus-prefs.dtd">
+
+<prefwindow id="melampus-prefs" title="&melampus.prefs.preferences;"
+        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+        buttons="accept,cancel">
+<prefpane id="melampus-prefs-system" 
+          label="&melampus.prefs.system;" 
+          image="chrome://melampus/skin/prefs/emblem-system.png">
+    <preferences>
+        <preference id="pref-lang" name="extensions.melampus.language" type="string"/>
+        <preference id="pref-debug" name="extensions.melampus.debug" type="bool"/>
+        <preference id="pref-context" name="extensions.melampus.includecontext" type="bool"/>
+        <preference id="pref-url-lexicon" name="extensions.melampus.url.lexicon" type="string"/>
+        <preference id="pref-url-lexicon-id" name="extensions.melampus.url.lexicon.id" type="string"/>
+        <preference id="pref-url-lexicon-pass" name="extensions.melampus.url.lexicon.pass" type="string"/> 
+        <preference id="pref-url-grammar" name="extensions.melampus.url.grammar" type="string"/>
+    </preferences>
+    <hbox flex="1" align="center">
+    <vbox flex="1">
+        <groupbox>
+            <caption label="&melampus.prefs.general;"/>
+            <label value="&melampus.prefs.language;" control="lang"/>
+            <textbox id="lang" preference="pref-lang"/>
+            <checkbox id="debug" label="&melampus.prefs.debug;" preference="pref-debug"/>
+            <checkbox id="includecontext" label="&melampus.prefs.includecontext;" preference="pref-context"/>
+        </groupbox>
+        <groupbox>
+            <caption label="&melampus.prefs.url;"/>
+            <label value="&melampus.prefs.url.lexicon;" control="url-lexicon"/>
+            <textbox id="url-lexicon" preference="pref-url-lexicon"/>
+            <label value="&melampus.prefs.url.lexicon.id;" control="url-lexicon-id"/>
+            <textbox id="url-lexicon-id" preference="pref-url-lexicon-id"/>
+            <label value="&melampus.prefs.url.lexicon.pass;" control="url-lexicon-pass"/>
+            <textbox id="url-lexicon-id" preference="pref-url-lexicon-pass" type="password"/>        
+            <label value="&melampus.prefs.url.grammar;" control="url-grammar"/>
+            <textbox id="url-grammar" preference="pref-url-grammar"/>
+        </groupbox>
+    </vbox>
+    </hbox>
+</prefpane>
+<prefpane id="melampus-prefs-mouse" 
+          label="&melampus.prefs.mouse;" 
+          image="chrome://melampus/skin/prefs/input-mouse.png">
+    <preferences>
+        <preference id="pref-trigger" name="extensions.melampus.popuptrigger" type="string"/>
+    </preferences>
+    <hbox flex="1" align="center">
+    <vbox flex="1">
+        <groupbox flex="1">
+            <caption label="&melampus.prefs.popuptrigger;" />
+            <radiogroup preference="pref-trigger">
+                <radio label="&melampus.prefs.popuptrigger.mousemove;" value="mousemove"/>    
+                <radio label="&melampus.prefs.popuptrigger.dblclick;" value="dblclick"/>
+            </radiogroup>
+        </groupbox>
+    </vbox>
+    </hbox>
+</prefpane>
+</prefwindow>
